@@ -67,16 +67,6 @@ export default {
                         kdo: this.kdo,
                     }
                     this.$emit('new-calc', newCalc)
-                    this.height = ''
-                    this.weight = ''
-                    this.ppt = ''
-                    this.sv = ''
-                    this.chss = ''
-                    this.dzla = ''
-                    this.adsr = ''
-                    this.lasr = ''
-                    this.cvd = ''
-                    this.kdo = ''
                  }
         }
     }

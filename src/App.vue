@@ -32,10 +32,16 @@ export default {
   methods: {
     newCalc(newCalculation) {
       console.log(newCalculation)
-    },
+      
 
-    outputCalc(newCalculation) {
-    console.log(newCalculation)
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newCalculation)
+    };
+    fetch("http://localhost:5000/calculator/calc/new", requestOptions)
+      .then(response => response.json())
+      .then(data => (this.postId = data.id));
     }
   }
 }

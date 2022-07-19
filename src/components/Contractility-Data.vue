@@ -4,7 +4,7 @@
             <li>Сократимость</li>
             <hr>
             <li><h5>УРЛД</h5></li>
-            <li><input type="text" v-model="height" placeholder="г х м"></li>
+            <li><input type="text" v-model="urld" placeholder="г х м"></li>
             <li><h5>ИУРЛЖ</h5></li>
             <li><input type="text" v-model="weight" placeholder="г х м/ м2"></li>
             <li><h5>РЛК</h5></li>
@@ -24,7 +24,7 @@
             <li><h5>КСО</h5></li>
             <li><input type="text" v-model="kdo" placeholder="мл"></li>   
             <li><h5>ИКСО</h5></li>
-            <li><input type="text" v-model="kdo" placeholder="мл/ м2"></li>  
+            <li><input type="text" v-model="o" placeholder="мл/ м2"></li>  
 
         </ul>
     </form>
@@ -45,7 +45,8 @@ export default {
             adsr: '',
             lasr: '',
             cvd: '',
-            kdo: ''
+            kdo: '',
+            o:''
         }
     },
 
