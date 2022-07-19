@@ -1,15 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Калькулятор расчета гемодинамики</h1>
+    <hr>
+    <container>
+    <InputData @new-calc="newCalc"/>
+    <OutputData @output-calc="outputCalc"/>
+    <PreloadData @preload-calc="preloadCalc"/>
+    <PostloadData @postload-calc="postloadCalc"/>
+    <ContractilityData @contractility-calc="contractilityCalc"/>
+    </container>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import InputData from '@/components/Input-Data'
+import OutputData from '@/components/Output-Data'
+import PreloadData from '@/components/Preload-Data'
+import PostloadData from '@/components/Postload-Data'
+import ContractilityData from '@/components/Contractility-Data'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputData,
+    OutputData,
+    PreloadData,
+    PostloadData,
+    ContractilityData
+  },
+
+  methods: {
+    newCalc(newCalculation) {
+      console.log(newCalculation)
+    },
+
+    outputCalc(newCalculation) {
+    console.log(newCalculation)
+    }
   }
 }
 </script>
@@ -19,8 +46,23 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+
+  container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  h1 {
+      margin-bottom:1%;
+      font-style: bold;
+      font-size: auto;
+      justify-content: left;
+  }
+
+  hr {
+    margin-bottom: 1%;
+  }
+
 </style>
